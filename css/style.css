@@ -1,0 +1,48 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+*/
+
+/*
+First lecture
+* The best way to perform a basic reset using the universal selector.
+* How to set project-wide font definitions.
+* How to clip parts of elements using clip-path. 
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* fonts-family are inherited */
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.8),
+      rgba(40, 180, 133, 0.8)
+    ),
+    url(../img/hero.jpg);
+  /* makes the image always cover the container */
+  background-size: cover;
+  /* selects the default position of the image */
+  background-position: top;
+
+  /* loads a polygon function */
+  /* clip-path: polygon(x y, x y, x y); */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
