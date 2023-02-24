@@ -11,6 +11,10 @@ First lecture
 * The best way to perform a basic reset using the universal selector.
 * How to set project-wide font definitions.
 * How to clip parts of elements using clip-path. 
+
+Second lecture
+* The easiest way to center anything with the transform, top and left properties.
+
 */
 
 * {
@@ -45,4 +49,43 @@ body {
   /* loads a polygon function */
   /* clip-path: polygon(x y, x y, x y); */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  position: relative;
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo {
+  height: 35px;
+}
+
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.heading-primary--main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+}
+
+.heading-primary--sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 17.4px;
 }
