@@ -7,23 +7,25 @@ Dark green: #28b485
 */
 
 /*
-First lecture
+
 * The best way to perform a basic reset using the universal selector.
 * How to set project-wide font definitions.
 * How to clip parts of elements using clip-path. 
 
-Second lecture
+
 * The easiest way to center anything with the transform, top and left properties.
 
-3rd lecture
+
 * How to create CSS animations using @keyframes and the animation property.
 
-4th lecture
+
 * What pseudo-elements and pseudo-classes are.
 * How and why to use the ::after pseudo-element.
 * How to create a creative hover animation effect using the transition property.
 
 
+* How and why to use rem units in our project.
+* A great workflow for converting px to rem.
 
 */
 
@@ -33,11 +35,15 @@ Second lecture
   box-sizing: border-box;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
-  /* fonts-family are inherited */
+  /* fonts-family is inherited */
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
   padding: 30px;
@@ -167,7 +173,7 @@ body {
   padding: 15px 40px;
   display: inline-block;
   border-radius: 100px;
-  /* transition on the original state */
+  /* transition for the hover and active states */
   transition: all 0.2s;
   position: relative;
 }
