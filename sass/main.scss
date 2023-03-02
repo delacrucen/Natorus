@@ -20,6 +20,11 @@
 * A great workflow for converting px to rem.
 
 */
+
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
 *,
 *::after,
 *::before {
@@ -46,14 +51,21 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/hero.jpg);
   /* makes the image always cover the container */
   background-size: cover;
   /* selects the default position of the image */
   background-position: top;
+
   /* loads a polygon function */
   /* clip-path: polygon(x y, x y, x y); */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
   position: relative;
 }
 
@@ -78,6 +90,7 @@ body {
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
+
   /* - what is does is hides the back face of the element
      - useful to prevent Z axis elements to show
      - useful to prevent animation shaking
@@ -91,6 +104,7 @@ body {
   font-size: 6rem;
   font-weight: 400;
   letter-spacing: 3.5rem;
+
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
@@ -103,6 +117,7 @@ body {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1.75rem;
+
   /* combine: name - duration - timing */
   animation: moveInRight 1s ease-out;
 }
@@ -112,37 +127,45 @@ body {
     opacity: 0;
     transform: translateX(-10rem);
   }
+
   80% {
     transform: translateX(1rem);
   }
+
   100% {
     opacity: 1;
     transform: translate(0);
   }
 }
+
 @keyframes moveInRight {
   0% {
     opacity: 0;
     transform: translateX(10rem);
   }
+
   80% {
     transform: translateX(-1rem);
   }
+
   100% {
     opacity: 1;
     transform: translate(0);
   }
 }
+
 @keyframes moveInBottom {
   0% {
     opacity: 0;
     transform: translateY(3rem);
   }
+
   100% {
     opacity: 1;
     transform: translate(0);
   }
 }
+
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
@@ -199,5 +222,3 @@ body {
   /* apply the style of the keyframe at 0% before the animation starts */
   animation-fill-mode: backwards;
 }
-
-/*# sourceMappingURL=style.css.map */
