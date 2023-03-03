@@ -25,6 +25,9 @@ $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
 
+$color-grey-dark: #777;
+$color-white: #fff;
+
 *,
 *::after,
 *::before {
@@ -43,7 +46,7 @@ body {
   font-weight: 400;
   /* font-size: 16px; */
   line-height: 1.7;
-  color: #777;
+  color: $color-grey-dark;
   padding: 3rem;
   /* better practice with the inherit value in the general selector */
   box-sizing: border-box;
@@ -88,7 +91,7 @@ body {
 }
 
 .heading-primary {
-  color: #fff;
+  color: $color-white;
   text-transform: uppercase;
 
   /* - what is does is hides the back face of the element
@@ -190,7 +193,7 @@ body {
 }
 
 .btn--white {
-  background-color: #fff;
+  background-color: $color-white;
   color: #777;
 }
 
@@ -208,7 +211,7 @@ body {
 }
 
 .btn--white::after {
-  background-color: #fff;
+  background-color: $color-white;
 }
 
 /* selects the hover state of the pseudo-element ::after */
