@@ -236,8 +236,6 @@ body {
   height: 50rem;
 }
 .card__side {
-  background-color: orange;
-  color: white;
   font-size: 2rem;
   height: 50rem;
   transition: all 0.8s ease;
@@ -249,9 +247,11 @@ body {
 }
 .card__side--front {
   background-color: green;
+  color: #fff;
 }
 .card__side--back {
   background-color: red;
+  color: #fff;
   transform: rotateY(180deg);
 }
 .card:hover .card__side--front {
