@@ -33,6 +33,7 @@
     }
   }
 
+  //composition:hover composition__photo:not(:hover)
   &:hover &__photo:not(:hover) {
     transform: scale(0.95);
   }

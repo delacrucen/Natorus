@@ -53,10 +53,10 @@ body {
     $color-primary-light,
     $color-primary-dark
   );
-  // attach the background color to the text
-  background-clip: text;
   // compatibility for edge lol
   -webkit-background-clip: text;
+  // attach the background color to the text
+  background-clip: text;
   // needs to have transparent in order to show the gradient effect
   color: transparent;
   letter-spacing: 2px;
