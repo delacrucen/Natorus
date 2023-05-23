@@ -656,6 +656,7 @@ body {
   right: 6rem;
   border-radius: 50%;
   z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
 }
 .navigation__background {
   height: 6rem;
@@ -666,7 +667,7 @@ body {
   right: 6.5rem;
   background-image: radial-gradient(#7ed56f, #28b485);
   z-index: 1000;
-  transform: scale(100);
+  transition: transform 0.8s ease-in-out;
 }
 .navigation__nav {
   height: 100vh;
@@ -675,6 +676,9 @@ body {
   top: 0;
   right: 0;
   z-index: 1500;
+  opacity: 0;
+  width: 0;
+  transition: all 0.8s ease-in-out;
 }
 .navigation__list {
   position: absolute;
@@ -683,6 +687,7 @@ body {
   transform: translate(-50%, -50%);
   list-style-type: none;
   text-align: center;
+  width: 100%;
 }
 .navigation__item {
   margin: 1rem;
@@ -697,7 +702,7 @@ body {
   text-transform: uppercase;
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
   background-size: 230%;
-  transition: all 0.5s;
+  transition: all 0.1s;
 }
 .navigation__link:link span, .navigation__link:visited span {
   margin-right: 2rem;
@@ -707,6 +712,13 @@ body {
   background-position: 100%;
   color: #55c57a;
   transform: translateX(-2rem) !important;
+}
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(80);
+}
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%;
 }
 
 .section-about {
