@@ -17,6 +17,19 @@
     cursor: pointer;
   }
 
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
   &:hover {
     transform: translateY(-0.3px);
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
@@ -50,19 +63,6 @@
     &::after {
       background-color: $color-primary;
     }
-  }
-
-  &::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all 0.4s;
   }
 
   &--animated {
