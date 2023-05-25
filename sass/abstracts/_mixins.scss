@@ -36,6 +36,9 @@ $breakpoint argument choices:
 - tab-land
 - big-desktop
 */
+
+//Order: Base + typography > general layout + grid > page layout > components
+
 @mixin respond($breakpoint) {
   //$breakpoint inside the () allows to insert a paramenter and then we use if to test the case like a programming language
   @if $breakpoint == phone {
