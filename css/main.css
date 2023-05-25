@@ -180,6 +180,18 @@ body {
   border: none;
   cursor: pointer;
 }
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
 .btn:hover {
   transform: translateY(-0.3px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -206,18 +218,6 @@ body {
 }
 .btn--green::after {
   background-color: #55c57a;
-}
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 100px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.4s;
 }
 .btn--animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
