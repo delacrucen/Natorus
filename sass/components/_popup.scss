@@ -13,7 +13,7 @@
 
   &__content {
     @include transform-translate-fifty;
-    width: 75%;
+    width: 90%;
     background-color: $color-white;
     box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
     border-radius: 3px;
@@ -24,18 +24,48 @@
     //trick to put the translate again in here to render correctly
     transform: translate(-50%, -50%) scale(0.25);
     transition: all 0.4s 0.2s;
+
+    @include respond(tab-land) {
+      width: 95%;
+    }
+
+    @include respond(tab-port) {
+      display: block;
+    }
   }
 
   &__left {
-    width: 33.333333%;
+    width: 40%;
     display: table-cell;
+
+    @include respond(tab-land) {
+      width: 40%;
+    }
+
+    @include respond(tab-port) {
+      display: none;
+    }
   }
 
   &__right {
-    width: 66.666667%;
+    width: 60%;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+
+    @include respond(tab-land) {
+      width: 60%;
+    }
+
+    @include respond(tab-port) {
+      width: 100%;
+      display: block;
+      overflow-x: hidden;
+    }
+
+    @include respond(phone) {
+      padding: 2rem 3rem;
+    }
   }
 
   &__img {
@@ -48,10 +78,17 @@
     margin-bottom: 4rem;
 
     column-count: 2;
-    column-gap: 4rem;
+    column-gap: 2rem;
     column-rule: 1px solid $color-grey-light-2;
 
     hyphens: auto;
+
+    @include respond(tab-land) {
+      font-size: 1.5rem;
+      margin-bottom: 4rem;
+      column-count: auto;
+      hyphens: auto;
+    }
   }
 
   //open state
