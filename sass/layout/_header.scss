@@ -5,7 +5,7 @@
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)
     ),
-    url(../img/hero.jpg);
+    url(../img/hero-small.jpg);
   /* makes the image always cover the container */
   background-size: cover;
   /* selects the default position of the image */
@@ -17,6 +17,18 @@
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
   position: relative;
+
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    //media-query always in em > to put in em we divide pixels by default font size: 16px. px/16
+    //first condition: loads big image till 601px (comma separated)
+    //2nd condition: loads big image when >=2000px
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.8),
+        rgba($color-secondary-dark, 0.8)
+      ),
+      url(../img/hero.jpg);
+  }
 
   @include respond(phone) {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
