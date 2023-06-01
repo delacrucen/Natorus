@@ -4,11 +4,17 @@
   "description": "Landing page for natours",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "sass --watch --style=expanded ./sass:./css"
+    "watch:sass": "sass --watch --style=expanded ./sass:./css",
+    "compile:sass": "sass sass/main.scss css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css"
   },
-  "author": "",
+  "author": "Mauri",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "concat": "^1.0.3",
+    "postcss-cli": "^10.1.0",
     "sass": "^1.58.3"
   }
 }
