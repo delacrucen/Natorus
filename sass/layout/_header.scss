@@ -24,9 +24,9 @@
     height: 95vh;
   }
 
-  @media (min-resolution: 192dpi) and (min-width: 37.5em),
-    (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
-    (min-width: 125em) {
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    only screen and (min-width: 125em) {
     //media-query always in em > to put in em we divide pixels by default font size: 16px. px/16
     //first condition: loads big image till 601px (comma separated)
     //2nd condition: loads big image when >=2000px
